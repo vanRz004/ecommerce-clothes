@@ -1,9 +1,20 @@
-<div class="container mx-auto">
-  <app-header ></app-header>
 
-  <div class="grid grid-cols-4 gap-8 mt-5">
+<div class="flex gap-4 mt-5">
+  <div class="w-80">
+    <ul>
+      <li>
+        <a routerLink="/" >All</a>
+      </li>
+      @for (item of categories(); track $index) {
+        <li>
+          <a routerLink="/" [queryParams]="{category_id: item.id}">{{ item.name}}</a>
+        </li>
+      }
+    </ul>
+  </div>
+  <div class="grid grid-cols-4 gap-8 w-full" >
     @for (item of products(); track $index) {
-    <app-product [product]="item" (addToCart)="addToCart($event)"></app-product>
+      <app-product [product]="item" (addToCart)="addToCart($event)"></app-product>
     }
   </div>
 </div>

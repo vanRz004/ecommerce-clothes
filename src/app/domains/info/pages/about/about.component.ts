@@ -8,7 +8,7 @@ import { CounterComponent } from "../../../shared/components/counter/counter.com
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
-export class AboutComponent {
+export default class AboutComponent {
  duration = signal(1000);
  message = signal('mensaje')
 

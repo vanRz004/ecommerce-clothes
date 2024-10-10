@@ -2,10 +2,11 @@ import { Component, EventEmitter, Input, Output, } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Product } from '../../../shared/components/counter/models/product.model';
 import { ReversePipe } from '@shared/pipes/reverse.pipe';
+import { RouterLinkWithHref} from '@angular/router';
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [CommonModule, ReversePipe],
+  imports: [CommonModule, ReversePipe, RouterLinkWithHref],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css'
 })

@@ -12,5 +12,5 @@ export class TimeAgoPipe implements PipeTransform {
 
     return formatDistance(today, date)
   }
-
+  
 }
